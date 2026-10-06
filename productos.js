@@ -23,7 +23,7 @@ const NEGOCIO = {
   // Formulario para que tus clientes dejen reseñas (ver README, sección "Reseñas").
   // Mientras esté vacío (""), el botón "Dejar una reseña" abre WhatsApp contigo.
   // Cuando tengas el formulario, pega aquí su enlace: "https://forms.gle/...."
-  formularioResenas: ""
+  formularioResenas: "https://forms.gle/K4siuc9ZETxViph28",
 };
 
 
