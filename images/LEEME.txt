@@ -1,0 +1,13 @@
+CARPETA DE FOTOS
+
+Pon aquí las fotos de tus equipos (formato .jpg, .jpeg, .png o .webp).
+Los nombres deben coincidir EXACTAMENTE con los que escribes en productos.js
+(mayúsculas, minúsculas y guiones cuentan).
+
+Nombres que usa el catálogo actual:
+  iphone-17-air.jpg   iphone-16-99.jpg   iphone-12-pro-max.jpg
+  iphone-17-pro.jpg   iphone-14.jpg      iphone-17.jpg
+  iphone-16-100.jpg   airpods-4.jpg      airpods-4-anc.jpg
+
+Si una foto todavía no existe, la página muestra un recuadro "Foto próximamente".
+Tip: usa fotos de menos de 500 KB para que la página cargue rápido en celular.

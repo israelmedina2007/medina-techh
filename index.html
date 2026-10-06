@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medina Tech | iPhones y accesorios en México</title>
+  <meta name="description" content="Medina Tech: iPhones y AirPods seleccionados, con información clara sobre batería, capacidad, estado y precio. Atención directa por WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1220">
+
+  <!-- ========================================================
+       CAMBIAR-DOMINIO: cuando tengas dominio propio, haz esto:
+       1) Quita las marcas de comentario de las 3 líneas marcadas
+          "CAMBIAR-DOMINIO" y sustituye TU-DOMINIO.com por tu dominio real.
+       (Mientras no haya dominio se dejan comentadas a propósito:
+        un enlace a un dominio que no existe perjudicaría tu posicionamiento.)
+       ======================================================== -->
+  <!-- CAMBIAR-DOMINIO (1/3) <link rel="canonical" href="https://TU-DOMINIO.com/"> -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Medina Tech | iPhones y accesorios">
+  <meta property="og:description" content="Tecnología que puedes confiar. iPhones y accesorios seleccionados con información clara.">
+  <meta property="og:site_name" content="Medina Tech">
+  <!-- CAMBIAR-DOMINIO (2/3) <meta property="og:url" content="https://TU-DOMINIO.com/"> -->
+  <!-- OPCIONAL: cuando tengas una foto para compartir en redes, añade su dirección completa:
+       <meta property="og:image" content="https://TU-DOMINIO.com/images/compartir.jpg"> -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Medina Tech",
+    "description": "Venta de iPhones y accesorios seleccionados.",
+    "areaServed": "MX"
+  }
+  </script>
+  <!-- CAMBIAR-DOMINIO (3/3): dentro del bloque de arriba, agrega después de "name": la línea
+       "url": "https://TU-DOMINIO.com/",   -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Medina Tech, inicio">
+        <span class="brand-mark">M</span>
+        <span>Medina Tech</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#confianza">Confianza</a>
+        <a href="#garantia">Garantía</a>
+        <a href="#entrega">Entrega y pago</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+        <a class="nav-whatsapp" data-whatsapp href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">MEDINA TECH</p>
+        <h1>Tecnología que<br><span>puedes confiar.</span></h1>
+        <p class="hero-copy">
+          iPhones y accesorios seleccionados, con información clara sobre su estado,
+          batería y capacidad.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+          <a class="button button-secondary" href="#confianza">Conócenos</a>
+        </div>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <!-- El catálogo se llena automáticamente desde productos.js. No edites esta sección. -->
+    <section class="catalog section" id="catalogo">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECCIÓN ACTUAL</p>
+            <h2>Catálogo</h2>
+          </div>
+          <p class="section-intro">Equipos y accesorios del catálogo actual, con su disponibilidad al día.</p>
+        </div>
+
+        <div class="filters" id="filters" role="group" aria-label="Filtrar catálogo"></div>
+
+        <noscript><p class="empty-note">Para ver el catálogo necesitas activar JavaScript en tu navegador.</p></noscript>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="trust section" id="confianza">
+      <div class="container">
+        <div class="trust-heading">
+          <p class="eyebrow">CONFIANZA</p>
+          <h2>Comprar tecnología<br><span>debe sentirse sencillo.</span></h2>
+          <p>
+            Mostramos la información importante de cada equipo para que puedas
+            decidir con claridad antes de comprar.
+          </p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card">
+            <span class="trust-number">01</span>
+            <h3>Información clara</h3>
+            <p>Capacidad, batería, color, estado físico y precio visibles desde el catálogo.</p>
+          </article>
+          <article class="trust-card">
+            <span class="trust-number">02</span>
+            <h3>Equipos revisados</h3>
+            <p>Presentamos cada equipo con sus datos relevantes antes de concretar la compra.</p>
+          </article>
+          <article class="trust-card">
+            <span class="trust-number">03</span>
+            <h3>Atención directa</h3>
+            <p>Resuelve tus dudas y consulta disponibilidad directamente por WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANTÍA: cuando tengas las condiciones definitivas, edita solo los textos de esta sección. -->
+    <section class="info-section section" id="garantia">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">GARANTÍA</p><h2>Compra con<br>mayor claridad.</h2></div>
+          <p class="section-intro">Las condiciones concretas se confirman antes de cerrar cada operación.</p>
+        </div>
+        <div class="info-grid">
+          <article class="info-card"><div class="info-icon">✓</div><h3>Condiciones claras</h3><p>Antes de la compra se informa qué incluye la garantía del equipo y qué situaciones quedan fuera.</p></article>
+          <article class="info-card"><div class="info-icon">01</div><h3>Consulta antes de comprar</h3><p>Si tienes dudas sobre una condición específica, puedes consultarla directamente por WhatsApp antes de concretar.</p></article>
+          <article class="info-card"><div class="info-icon">↗</div><h3>Atención posterior</h3><p>Conserva tu comprobante y la información de tu compra para cualquier aclaración posterior.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery section" id="entrega">
+      <div class="container delivery-card">
+        <div>
+          <p class="eyebrow">ENTREGA Y PAGO</p>
+          <h2>Recibe tu equipo<br><span>de forma sencilla.</span></h2>
+          <p>Atendemos principalmente de forma local. Consulta por WhatsApp ubicación, horarios y disponibilidad para tu compra.</p>
+        </div>
+        <div class="delivery-options">
+          <div><strong>Entrega personal</strong><span>Consulta ubicación y disponibilidad.</span></div>
+          <div><strong>Envío</strong><span>Por ahora la venta es principalmente local. Pregunta si hay una opción para tu caso.</span></div>
+          <div><strong>Formas de pago</strong><span>Transferencia bancaria o efectivo. Por ahora no se paga con tarjeta en esta página.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="opiniones">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OPINIONES</p>
+            <h2>Opiniones de<br>nuestros clientes</h2>
+          </div>
+          <div class="review-actions">
+            <p class="review-summary" id="reviewSummary" hidden></p>
+            <a class="button button-secondary" id="reviewButton" href="#">Dejar una reseña</a>
+          </div>
+        </div>
+        <div class="reviews-list" id="reviewsList"></div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">CONTACTO</p>
+          <h2>¿Encontraste tu<br><span>próximo equipo?</span></h2>
+          <p>Escríbenos para consultar disponibilidad, detalles y formas de entrega.</p>
+        </div>
+        <a class="button button-light" data-whatsapp href="#">Contactar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Medina Tech</div>
+      <p>© <span id="anio">2026</span> Medina Tech. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <div class="modal-image-wrap" id="modalImageWrap"></div>
+      <div class="modal-content">
+        <p class="eyebrow" id="modalType"></p>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <p class="condition-note" id="modalCondition"></p>
+        <p class="modal-price" id="modalPrice"></p>
+        <a class="button button-primary modal-buy" id="modalBuy" href="#">Consultar por WhatsApp</a>
+        <a class="button button-secondary modal-buy modal-alt" id="modalAlt" href="#" target="_blank" rel="noopener" hidden>Consultar equipos similares</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Orden importante: primero los datos, luego la lógica -->
+  <script src="productos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

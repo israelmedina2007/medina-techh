@@ -1,0 +1,5 @@
+# CAMBIAR-DOMINIO: sustituye TU-DOMINIO.com por tu dominio real cuando lo tengas.
+User-agent: *
+Allow: /
+
+Sitemap: https://TU-DOMINIO.com/sitemap.xml
