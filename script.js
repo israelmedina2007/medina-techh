@@ -1,8 +1,8 @@
 // ============================================================
-// MEDINA TECH — LÓGICA DE LA PÁGINA
+// MEDINA TECH â€” LÃ“GICA DE LA PÃGINA
 //
 // NORMALMENTE NO NECESITAS EDITAR ESTE ARCHIVO.
-// Productos, precios, WhatsApp y reseñas se cambian en productos.js
+// Productos, precios, WhatsApp y reseÃ±as se cambian en productos.js
 // ============================================================
 
 "use strict";
@@ -10,8 +10,8 @@
 // ------------------------------------------------------------
 // PREPARADO PARA EL FUTURO
 // Hoy, comprar = abrir WhatsApp (ver mensajeProducto y whatsappUrl).
-// Cuando existan carrito o pagos en línea, ese es el único punto
-// que habría que cambiar; el resto de la página seguiría igual.
+// Cuando existan carrito o pagos en lÃ­nea, ese es el Ãºnico punto
+// que habrÃ­a que cambiar; el resto de la pÃ¡gina seguirÃ­a igual.
 // ------------------------------------------------------------
 
 const ESTADOS = {
@@ -30,7 +30,7 @@ function normalizar(texto) {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
-// Evita que un texto con símbolos raros rompa el HTML
+// Evita que un texto con sÃ­mbolos raros rompa el HTML
 function esc(valor) {
   return String(valor ?? "").replace(/[&<>"']/g, caracter => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -50,8 +50,8 @@ const elGrid = document.getElementById("productGrid");
 const elFiltros = document.getElementById("filters");
 
 if (typeof PRODUCTOS === "undefined" || typeof NEGOCIO === "undefined") {
-  elGrid.innerHTML = '<p class="empty-note">No se pudo cargar el catálogo. Revisa que el archivo productos.js esté junto a index.html.</p>';
-  throw new Error("No se encontró productos.js");
+  elGrid.innerHTML = '<p class="empty-note">No se pudo cargar el catÃ¡logo. Revisa que el archivo productos.js estÃ© junto a index.html.</p>';
+  throw new Error("No se encontrÃ³ productos.js");
 }
 
 function infoTipo(tipo) {
@@ -65,14 +65,14 @@ function infoTipo(tipo) {
 
 function prepararProducto(p) {
   if (!p || p.id === undefined || !p.nombre || typeof p.precio !== "number") {
-    console.warn("Producto ignorado: le falta id, nombre o precio (el precio debe ser un número sin comillas).", p);
+    console.warn("Producto ignorado: le falta id, nombre o precio (el precio debe ser un nÃºmero sin comillas).", p);
     return null;
   }
 
   const claveEstado = normalizar(p.disponibilidad) || "disponible";
   let estado = ESTADOS[claveEstado];
   if (!estado) {
-    console.warn(`Disponibilidad no reconocida en "${p.nombre}": "${p.disponibilidad}". Usa Disponible, Apartado o Vendido. Se mostrará como Disponible.`);
+    console.warn(`Disponibilidad no reconocida en "${p.nombre}": "${p.disponibilidad}". Usa Disponible, Apartado o Vendido. Se mostrarÃ¡ como Disponible.`);
     estado = ESTADOS.disponible;
   }
 
@@ -105,8 +105,8 @@ function whatsappUrl(mensaje) {
   return `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 }
 
-// Mensaje automático. Ejemplo:
-// "Hola, me interesa el iPhone 16 de 128 GB por $10,799. ¿Sigue disponible?"
+// Mensaje automÃ¡tico. Ejemplo:
+// "Hola, me interesa el iPhone 16 de 128 GB por $10,799. Â¿Sigue disponible?"
 function mensajeProducto(p) {
   const { articulo, plural } = p.info;
   let texto = `Hola, me interesa${plural ? "n" : ""} ${articulo} ${p.nombre}`;
@@ -115,17 +115,17 @@ function mensajeProducto(p) {
   texto += ` por ${dinero(p.precio)}.`;
 
   if (p.estado.clase === "apartado") {
-    return `${texto} Veo que aparece como apartado. ¿Me pueden avisar si vuelve a estar disponible?`;
+    return `${texto} Veo que aparece como apartado. Â¿Me pueden avisar si vuelve a estar disponible?`;
   }
-  return `${texto} ${plural ? "¿Siguen disponibles?" : "¿Sigue disponible?"}`;
+  return `${texto} ${plural ? "Â¿Siguen disponibles?" : "Â¿Sigue disponible?"}`;
 }
 
-const MENSAJE_GENERAL = "Hola, me gustaría consultar el catálogo de Medina Tech. ¿Qué equipos tienen disponibles?";
+const MENSAJE_GENERAL = "Hola, me gustarÃ­a consultar el catÃ¡logo de Medina Tech. Â¿QuÃ© equipos tienen disponibles?";
 
-// ---------- Imágenes ----------
+// ---------- ImÃ¡genes ----------
 
 function placeholderHTML(nombre) {
-  return `<div class="image-placeholder"><strong>${esc(nombre)}</strong><span>Foto próximamente</span></div>`;
+  return `<div class="image-placeholder"><strong>${esc(nombre)}</strong><span>Foto prÃ³ximamente</span></div>`;
 }
 
 function imagenHTML(src, alt) {
@@ -146,12 +146,12 @@ function activarFallbacks(raiz, nombre, alFallar) {
   });
 }
 
-// ---------- Catálogo ----------
+// ---------- CatÃ¡logo ----------
 
 function textoDatosTarjeta(p) {
   const chips = [`<span class="meta-chip">${esc(p.color)}</span>`];
   if (p.almacenamiento) chips.push(`<span class="meta-chip">${esc(p.almacenamiento)}</span>`);
-  if (p.bateria !== undefined && p.bateria !== "") chips.push(`<span class="meta-chip battery">Batería ${esc(p.bateria)}%</span>`);
+  if (p.bateria !== undefined && p.bateria !== "") chips.push(`<span class="meta-chip battery">BaterÃ­a ${esc(p.bateria)}%</span>`);
   if (p.caracteristica) chips.push(`<span class="meta-chip">${esc(p.caracteristica)}</span>`);
   return chips.join("");
 }
@@ -199,7 +199,7 @@ function renderProductos() {
   const visibles = CATALOGO.filter(p => filtroActual === "all" || p.tipo === filtroActual);
 
   if (visibles.length === 0) {
-    elGrid.innerHTML = '<p class="empty-note">Por ahora no hay equipos en esta categoría. Escríbenos por WhatsApp y te avisamos cuando haya.</p>';
+    elGrid.innerHTML = '<p class="empty-note">Por ahora no hay equipos en esta categorÃ­a. EscrÃ­benos por WhatsApp y te avisamos cuando haya.</p>';
     return;
   }
 
@@ -238,7 +238,7 @@ elGrid.addEventListener("click", evento => {
   if (boton) abrirModal(boton.dataset.details, boton);
 });
 
-// ---------- Modal con galería ----------
+// ---------- Modal con galerÃ­a ----------
 
 const modalBackdrop = document.getElementById("modalBackdrop");
 const modal = modalBackdrop.querySelector(".modal");
@@ -281,8 +281,8 @@ function galeriaHTML(p) {
   }
 
   const flechas = total > 1
-    ? `<button class="gallery-nav prev" data-dir="-1" aria-label="Foto anterior">‹</button>
-       <button class="gallery-nav next" data-dir="1" aria-label="Foto siguiente">›</button>`
+    ? `<button class="gallery-nav prev" data-dir="-1" aria-label="Foto anterior">â€¹</button>
+       <button class="gallery-nav next" data-dir="1" aria-label="Foto siguiente">â€º</button>`
     : "";
 
   const miniaturas = total > 1
@@ -292,7 +292,7 @@ function galeriaHTML(p) {
     : "";
 
   const nota = p.fotoDeReferencia
-    ? '<p class="reference-note">Imagen de referencia. No muestra el estado físico exacto de este equipo; consulta su estado real antes de comprar.</p>'
+    ? '<p class="reference-note">Imagen de referencia. No muestra el estado fÃ­sico exacto de este equipo; consulta su estado real antes de comprar.</p>'
     : "";
 
   return `
@@ -306,8 +306,8 @@ function galeriaHTML(p) {
 function filasDatos(p) {
   const filas = [["Color", p.color]];
   if (p.almacenamiento) filas.push(["Capacidad", p.almacenamiento]);
-  if (p.bateria !== undefined && p.bateria !== "") filas.push(["Batería", `${p.bateria}%`]);
-  if (p.caracteristica) filas.push(["Característica", p.caracteristica]);
+  if (p.bateria !== undefined && p.bateria !== "") filas.push(["BaterÃ­a", `${p.bateria}%`]);
+  if (p.caracteristica) filas.push(["CaracterÃ­stica", p.caracteristica]);
   return filas.map(([etiqueta, valor]) => `
     <div class="spec"><span>${esc(etiqueta)}</span><span>${esc(valor)}</span></div>
   `).join("") + `
@@ -325,7 +325,7 @@ function abrirModal(id, origen) {
   modalType.textContent = p.info.nombre;
   modalTitle.textContent = p.nombre;
   modalPrice.textContent = dinero(p.precio);
-  modalCondition.innerHTML = `<strong>Estado físico</strong>${esc(p.estadoFisico)}`;
+  modalCondition.innerHTML = `<strong>Estado fÃ­sico</strong>${esc(p.estadoFisico)}`;
   modalSpecs.innerHTML = filasDatos(p);
 
   modalImageWrap.innerHTML = galeriaHTML(p);
@@ -337,7 +337,7 @@ function abrirModal(id, origen) {
     modalBuy.classList.add("is-disabled");
     modalBuy.textContent = "Vendido";
     modalAlt.hidden = false;
-    modalAlt.href = whatsappUrl(`Hola, vi que ${p.info.articulo} ${p.nombre} aparece como vendido. ¿Tienen equipos similares disponibles?`);
+    modalAlt.href = whatsappUrl(`Hola, vi que ${p.info.articulo} ${p.nombre} aparece como vendido. Â¿Tienen equipos similares disponibles?`);
   } else {
     modalBuy.href = whatsappUrl(mensajeProducto(p));
     modalBuy.removeAttribute("aria-disabled");
@@ -368,7 +368,7 @@ modalBackdrop.addEventListener("click", evento => {
   if (evento.target === modalBackdrop) cerrarModal();
 });
 
-// Galería: flechas y miniaturas
+// GalerÃ­a: flechas y miniaturas
 modalImageWrap.addEventListener("click", evento => {
   if (!productoAbierto) return;
   const flecha = evento.target.closest("[data-dir]");
@@ -377,7 +377,7 @@ modalImageWrap.addEventListener("click", evento => {
   if (miniatura) mostrarFoto(Number(miniatura.dataset.foto));
 });
 
-// Galería: deslizar con el dedo en el celular
+// GalerÃ­a: deslizar con el dedo en el celular
 let toqueInicio = null;
 modalImageWrap.addEventListener("touchstart", evento => {
   toqueInicio = evento.touches[0].clientX;
@@ -423,10 +423,14 @@ document.addEventListener("click", evento => {
 const elResenas = document.getElementById("reviewsList");
 const elResumen = document.getElementById("reviewSummary");
 
+// ReseÃ±as aprobadas desde Google Sheets / Apps Script
+const URL_RESENAS = "https://script.google.com/macros/s/AKfycbz8lhA_Ub0sePxkDW-_d1PjR6gkl4BJe25a0F30zWog4o6psopzVlBnvgCQspHf9loi/exec";
+let RESENAS = [];
+
 function estrellasHTML(n) {
   const llenas = Math.max(0, Math.min(5, Math.round(n)));
   return `<span class="stars" role="img" aria-label="${llenas} de 5 estrellas">` +
-    "★".repeat(llenas) + `<span class="stars-off">${"★".repeat(5 - llenas)}</span></span>`;
+    "â˜…".repeat(llenas) + `<span class="stars-off">${"â˜…".repeat(5 - llenas)}</span></span>`;
 }
 
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
@@ -439,23 +443,23 @@ function fechaBonita(texto) {
 }
 
 function renderResenas() {
-  const lista = (typeof RESENAS !== "undefined" ? RESENAS : [])
+  const lista = RESENAS
     .filter(r => r && r.nombre && r.comentario && Number(r.calificacion) >= 1 && Number(r.calificacion) <= 5);
 
   if (lista.length === 0) {
     elResumen.hidden = true;
     elResenas.innerHTML = `
       <div class="reviews-empty">
-        <div class="info-icon" aria-hidden="true">★</div>
-        <h3>Próximamente</h3>
-        <p>Próximamente podrás consultar opiniones de nuestros clientes.</p>
+        <div class="info-icon" aria-hidden="true">â˜…</div>
+        <h3>PrÃ³ximamente</h3>
+        <p>PrÃ³ximamente podrÃ¡s consultar opiniones de nuestros clientes.</p>
       </div>`;
     return;
   }
 
   const promedio = lista.reduce((suma, r) => suma + Number(r.calificacion), 0) / lista.length;
   elResumen.hidden = false;
-  elResumen.textContent = `${promedio.toFixed(1)} de 5 · ${lista.length} ${lista.length === 1 ? "opinión" : "opiniones"}`;
+  elResumen.textContent = `${promedio.toFixed(1)} de 5 Â· ${lista.length} ${lista.length === 1 ? "opiniÃ³n" : "opiniones"}`;
 
   elResenas.innerHTML = lista.map(r => `
     <article class="review-card">
@@ -469,6 +473,19 @@ function renderResenas() {
   `).join("");
 }
 
+async function cargarResenas() {
+  try {
+    const respuesta = await fetch(URL_RESENAS, { cache: "no-store" });
+    if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
+    const datos = await respuesta.json();
+    RESENAS = Array.isArray(datos) ? datos : [];
+  } catch (error) {
+    console.error("No se pudieron cargar las reseÃ±as:", error);
+    RESENAS = [];
+  }
+  renderResenas();
+}
+
 // ---------- Enlaces de WhatsApp generales ----------
 
 document.querySelectorAll("[data-whatsapp]").forEach(enlace => {
@@ -477,18 +494,18 @@ document.querySelectorAll("[data-whatsapp]").forEach(enlace => {
   enlace.rel = "noopener";
 });
 
-// Botón "Dejar una reseña": formulario si existe; si no, WhatsApp
+// BotÃ³n "Dejar una reseÃ±a": formulario si existe; si no, WhatsApp
 const botonResena = document.getElementById("reviewButton");
 const formulario = String(NEGOCIO.formularioResenas || "").trim();
 if (/^https:\/\//i.test(formulario)) {
   botonResena.href = formulario;
 } else {
-  botonResena.href = whatsappUrl("Hola, compré en Medina Tech y me gustaría dejar una reseña.");
+  botonResena.href = whatsappUrl("Hola, comprÃ© en Medina Tech y me gustarÃ­a dejar una reseÃ±a.");
 }
 botonResena.target = "_blank";
 botonResena.rel = "noopener";
 
-// ---------- Menú del celular ----------
+// ---------- MenÃº del celular ----------
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
@@ -510,4 +527,4 @@ navLinks.querySelectorAll("a").forEach(enlace => {
 document.getElementById("anio").textContent = new Date().getFullYear();
 renderFiltros();
 renderProductos();
-renderResenas();
+cargarResenas();
