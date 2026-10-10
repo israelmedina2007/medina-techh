@@ -31,19 +31,6 @@ const TIPOS = {
 // 4) PRODUCTOS DISPONIBLES
 const PRODUCTOS = [
   {
-    id: 11,
-    tipo: "iphone",
-    nombre: "iPhone 17 Pro Max",
-    almacenamiento: "512 GB",
-    bateria: 100,
-    color: "Naranja",
-    precio: 21199,
-    estadoFisico: "",
-    disponibilidad: "Disponible",
-    imagenes: ["images/iphone-17-pro-max.jpg"],
-    fotoDeReferencia: true
-  },
-  {
     id: 5,
     tipo: "iphone",
     nombre: "iPhone 17 Pro",
