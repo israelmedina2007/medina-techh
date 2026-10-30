@@ -71,7 +71,7 @@ const PRODUCTOS = [
     "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
     "disponibilidad": "Disponible",
     "imagenes": [
-      "medina-17-pro-max-reference.jpg"
+      "medina-17-pro-max-new.jpg"
     ],
     "fotoDeReferencia": true
   },
@@ -101,7 +101,7 @@ const PRODUCTOS = [
     "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
     "disponibilidad": "Disponible",
     "imagenes": [
-      "medina-15-pro-max-reference.jpg"
+      "medina-15-pro-max-new.webp"
     ],
     "fotoDeReferencia": true
   },
@@ -116,7 +116,7 @@ const PRODUCTOS = [
     "estadoFisico": "Seminuevo. Sólo teléfono, sin caja. Unidad del catálogo actual.",
     "disponibilidad": "Disponible",
     "imagenes": [
-      "medina-14-reference.jpg"
+      "medina-14-new.jpg"
     ],
     "fotoDeReferencia": true
   },
@@ -131,7 +131,7 @@ const PRODUCTOS = [
     "estadoFisico": "Seminuevo. Sólo teléfono, sin caja. Otra unidad disponible; consulta sus detalles.",
     "disponibilidad": "Disponible",
     "imagenes": [
-      "medina-14-reference.jpg"
+      "medina-14-new.jpg"
     ],
     "fotoDeReferencia": true
   }
