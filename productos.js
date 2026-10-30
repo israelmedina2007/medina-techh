@@ -31,6 +31,21 @@ const TIPOS = {
 // 4) PRODUCTOS DISPONIBLES
 const PRODUCTOS = [
   {
+    "id": 11,
+    "tipo": "iphone",
+    "nombre": "iPhone 17 Pro Max",
+    "almacenamiento": "256 GB",
+    "bateria": 100,
+    "color": "Azul",
+    "precio": 21499,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "medina-17-pro-max-new.jpg"
+    ],
+    "fotoDeReferencia": true
+  },
+  {
     "id": 2,
     "tipo": "iphone",
     "nombre": "iPhone Air",
@@ -57,21 +72,6 @@ const PRODUCTOS = [
     "disponibilidad": "Disponible",
     "imagenes": [
       "images/iphone-17.jpg"
-    ],
-    "fotoDeReferencia": true
-  },
-  {
-    "id": 11,
-    "tipo": "iphone",
-    "nombre": "iPhone 17 Pro Max",
-    "almacenamiento": "256 GB",
-    "bateria": 100,
-    "color": "Azul",
-    "precio": 21499,
-    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
-    "disponibilidad": "Disponible",
-    "imagenes": [
-      "medina-17-pro-max-new.jpg"
     ],
     "fotoDeReferencia": true
   },
