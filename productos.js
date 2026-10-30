@@ -1,7 +1,7 @@
 
 // ============================================================
 // MEDINA TECH — CATÁLOGO Y CONFIGURACIÓN
-// Actualizado: 8 de octubre de 2026
+// Actualizado: 30 de octubre de 2026
 // ============================================================
 
 // 1) DATOS DEL NEGOCIO
@@ -31,80 +31,109 @@ const TIPOS = {
 // 4) PRODUCTOS DISPONIBLES
 const PRODUCTOS = [
   {
-    id: 5,
-    tipo: "iphone",
-    nombre: "iPhone 17 Pro",
-    almacenamiento: "256 GB",
-    bateria: 100,
-    color: "Azul",
-    precio: 17999,
-    estadoFisico: "",
-    disponibilidad: "Disponible",
-    imagenes: ["images/iphone-17-pro.jpg"],
-    fotoDeReferencia: true
+    "id": 2,
+    "tipo": "iphone",
+    "nombre": "iPhone Air",
+    "almacenamiento": "256 GB",
+    "bateria": 97,
+    "color": "Blanco / Plata",
+    "precio": 14999,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "images/iphone-air.jpg"
+    ],
+    "fotoDeReferencia": true
   },
   {
-    id: 2,
-    tipo: "iphone",
-    nombre: "iPhone Air",
-    almacenamiento: "256 GB",
-    bateria: 97,
-    color: "Blanco / Plata",
-    precio: 14999,
-    estadoFisico: "",
-    disponibilidad: "Disponible",
-    imagenes: ["images/iphone-air.jpg"],
-    fotoDeReferencia: true
+    "id": 7,
+    "tipo": "iphone",
+    "nombre": "iPhone 17",
+    "almacenamiento": "256 GB",
+    "bateria": 92,
+    "color": "Morado / Lavanda",
+    "precio": 14499,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "images/iphone-17.jpg"
+    ],
+    "fotoDeReferencia": true
   },
   {
-    id: 7,
-    tipo: "iphone",
-    nombre: "iPhone 17",
-    almacenamiento: "256 GB",
-    bateria: 92,
-    color: "Morado / Lavanda",
-    precio: 14499,
-    estadoFisico: "",
-    disponibilidad: "Disponible",
-    imagenes: ["images/iphone-17.jpg"],
-    fotoDeReferencia: true
+    "id": 11,
+    "tipo": "iphone",
+    "nombre": "iPhone 17 Pro Max",
+    "almacenamiento": "256 GB",
+    "bateria": 100,
+    "color": "Azul",
+    "precio": 21499,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "medina-17-pro-max-reference.jpg"
+    ],
+    "fotoDeReferencia": true
   },
   {
-    id: 8,
-    tipo: "iphone",
-    nombre: "iPhone 16",
-    almacenamiento: "128 GB",
-    bateria: 100,
-    color: "Negro",
-    precio: 10999,
-    estadoFisico: "",
-    disponibilidad: "Disponible",
-    imagenes: ["images/iphone-16.jpg"],
-    fotoDeReferencia: true
+    "id": 8,
+    "tipo": "iphone",
+    "nombre": "iPhone 16",
+    "almacenamiento": "128 GB",
+    "bateria": 100,
+    "color": "Negro",
+    "precio": 10999,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "images/iphone-16.jpg"
+    ],
+    "fotoDeReferencia": true
   },
   {
-    id: 9,
-    tipo: "airpods",
-    nombre: "AirPods 4",
-    caracteristica: "Sin cancelación de ruido",
-    color: "Blanco",
-    precio: 2099,
-    estadoFisico: "Nuevos.",
-    disponibilidad: "Disponible",
-    imagenes: ["images/airpods-4.webp"],
-    fotoDeReferencia: true
+    "id": 12,
+    "tipo": "iphone",
+    "nombre": "iPhone 15 Pro Max",
+    "almacenamiento": "512 GB",
+    "bateria": 81,
+    "color": "Negro",
+    "precio": 11699,
+    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "medina-15-pro-max-reference.jpg"
+    ],
+    "fotoDeReferencia": true
   },
   {
-    id: 10,
-    tipo: "airpods",
-    nombre: "AirPods 4",
-    caracteristica: "Con cancelación de ruido",
-    color: "Blanco",
-    precio: 2499,
-    estadoFisico: "Nuevos.",
-    disponibilidad: "Disponible",
-    imagenes: ["images/airpods-4.webp"],
-    fotoDeReferencia: true
+    "id": 13,
+    "tipo": "iphone",
+    "nombre": "iPhone 14",
+    "almacenamiento": "128 GB",
+    "bateria": 85,
+    "color": "Negro",
+    "precio": 4799,
+    "estadoFisico": "Seminuevo. Sólo teléfono, sin caja. Unidad del catálogo actual.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "medina-14-reference.jpg"
+    ],
+    "fotoDeReferencia": true
+  },
+  {
+    "id": 14,
+    "tipo": "iphone",
+    "nombre": "iPhone 14",
+    "almacenamiento": "128 GB",
+    "bateria": 85,
+    "color": "Negro",
+    "precio": 5499,
+    "estadoFisico": "Seminuevo. Sólo teléfono, sin caja. Otra unidad disponible; consulta sus detalles.",
+    "disponibilidad": "Disponible",
+    "imagenes": [
+      "medina-14-reference.jpg"
+    ],
+    "fotoDeReferencia": true
   }
 ];
 
