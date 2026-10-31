@@ -1,7 +1,7 @@
 
 // ============================================================
 // MEDINA TECH — CATÁLOGO Y CONFIGURACIÓN
-// Actualizado: 30 de octubre de 2026
+// Actualizado: 31 de octubre de 2026
 // ============================================================
 
 // 1) DATOS DEL NEGOCIO
@@ -30,21 +30,6 @@ const TIPOS = {
 
 // 4) PRODUCTOS DISPONIBLES
 const PRODUCTOS = [
-  {
-    "id": 11,
-    "tipo": "iphone",
-    "nombre": "iPhone 17 Pro Max",
-    "almacenamiento": "256 GB",
-    "bateria": 100,
-    "color": "Azul",
-    "precio": 21499,
-    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
-    "disponibilidad": "Disponible",
-    "imagenes": [
-      "medina-17-pro-max-new.jpg"
-    ],
-    "fotoDeReferencia": true
-  },
   {
     "id": 2,
     "tipo": "iphone",
@@ -87,21 +72,6 @@ const PRODUCTOS = [
     "disponibilidad": "Disponible",
     "imagenes": [
       "images/iphone-16.jpg"
-    ],
-    "fotoDeReferencia": true
-  },
-  {
-    "id": 12,
-    "tipo": "iphone",
-    "nombre": "iPhone 15 Pro Max",
-    "almacenamiento": "512 GB",
-    "bateria": 81,
-    "color": "Negro",
-    "precio": 11699,
-    "estadoFisico": "Seminuevo. Incluye caja. Consulta detalles del estado físico por WhatsApp.",
-    "disponibilidad": "Disponible",
-    "imagenes": [
-      "medina-15-pro-max-new.webp"
     ],
     "fotoDeReferencia": true
   },
